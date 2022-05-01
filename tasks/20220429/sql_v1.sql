@@ -12,15 +12,9 @@ WHERE left(info.createDate, 6) = #{day};
 
 -- 3. 부서별 월별 로그인수
 SELECT count(*) AS logCnt
-FROM (
-       SELECT info.userID AS id, left(info.createDate,6) AS logDate, user.HR_ORGAN AS organ
-        FROM statistic.requestinfo AS info LEFT OUTER JOIN statistic.user user
-        ON info.userID = user.userID
-        WHERE info.requestCode = 'L'
-) AS sub
-WHERE sub.organ = #{organ} 
-GROUP BY logDate
-HAVING left(logDate,4) = #{month};
+FROM statistic.requestinfo AS info LEFT OUTER JOIN statistic.user user
+ON info.userID = user.userID
+WHERE info.requestCode = 'L' AND user.HR_ORGAN = #{dept} AND left(info.createDate,4) = #{month};
 
 
 -- 4. 평균 하루 로그인수
