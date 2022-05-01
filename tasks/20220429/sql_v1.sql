@@ -11,7 +11,7 @@ WHERE left(info.createDate, 6) = #{day};
 
 
 -- 3. 부서별 월별 로그인수
-SELECT count(*) AS totCnt
+SELECT count(*) AS logCnt
 FROM (
        SELECT info.userID AS id, left(info.createDate,6) AS logDate, user.HR_ORGAN AS organ
         FROM statistic.requestinfo AS info LEFT OUTER JOIN statistic.user user
