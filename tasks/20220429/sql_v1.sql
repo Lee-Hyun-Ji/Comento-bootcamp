@@ -27,9 +27,14 @@ FROM(
 ) AS sub;
 
 
--- 5. 휴일을 제외한 로그인수(로그인 날짜와 로그인수 select)
+-- 5-1. 주말을 제외한 로그인수
 SELECT left(info.createDate, 6) AS logDate, count(left(info.createDate, 6)) AS logCnt
 FROM statistic.requestinfo AS info
 WHERE info.requestCode = 'L' AND left(info.createDate, 4) = #{month}
 GROUP BY logDate
 ORDER BY logDate;
+
+-- 5-2. 특정 월의 휴일 구하기
+SELECT day(h.date) AS dayOfHoliday
+FROM statistic.holidays AS h
+WHERE right(year(h.date),2)=#{year} AND month(h.date)=#{month};
