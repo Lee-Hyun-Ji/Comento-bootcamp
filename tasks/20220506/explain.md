@@ -8,7 +8,7 @@
 
 ### 2. SQL 쿼리 매핑
 * 주말을 제외한 날짜, 로그인수 select
-```
+```sql
 <select id="selectMonthLogin" parameterType="string" resultType="com.devfun.setting_boot.dto.LoginDateListDto">
 		SELECT substr(info.createDate,5,2) AS logDate, count(left(info.createDate, 6)) AS logCnt
 		FROM statistic.requestinfo info
@@ -19,7 +19,7 @@
 ```
 
 * 특정 월의 공휴일 일자 select
-```
+```sql
 <select id="selectHoliday" parameterType="string" resultType="string">
 		SELECT day(h.date) AS dayOfHoliday
 		FROM statistic.holidays h
@@ -31,7 +31,7 @@
 
 ### 3. Service 클래스에서 공휴일을 제외한 총 로그인수 구하기
 * StatisticServiceImpl.java[(코드)](https://github.com/Lee-Hyun-Ji/spring-web-setting/blob/main/settingweb_boot/src/main/java/com/devfun/setting_boot/service/StatisticServiceImpl.java)
-```
+```java
 List<LoginDateListDto> weekdayLogins = mapper.selectMonthLogin(month);
 List<String> holidays = mapper.selectHoliday(month.substring(0, 2), month.substring(2));
 			
@@ -48,7 +48,7 @@ int logCnt = 0;
 
 ### 1. 예외 처리를 위한 클래스 생성
 * ErrorMessage.java
-```
+```java
 public class ErrorMessage {
 	private String errorCode;
 	private String errorMessage;
@@ -73,7 +73,7 @@ public class ErrorMessage {
 }
 ```
 * DateFormatException.java
-```
+```java
 public class DateFormatException extends Exception{
 	public DateFormatException(String date) {
 		super("요청 변수가 잘못된 형식입니다(\'" + date + "\')");
@@ -86,7 +86,7 @@ public class DateFormatException extends Exception{
 
 ### 2. Service 클래스에서 유효성 검사 코드 구현
 * StatisticServiceImpl.java[(코드)](https://github.com/Lee-Hyun-Ji/spring-web-setting/blob/main/settingweb_boot/src/main/java/com/devfun/setting_boot/service/StatisticServiceImpl.java)
-```
+```java
 if(month.length() != 4)
   throw new DateFormatException(month);
 for(int i = 0; i < 4; i++) {
@@ -100,7 +100,7 @@ for(int i = 0; i < 4; i++) {
 
 ### 3. Controller 클래스에서 @ExceptionHandler로 예외 처리
 * StatisticApiController.java[(코드)](https://github.com/Lee-Hyun-Ji/spring-web-setting/blob/main/settingweb_boot/src/main/java/com/devfun/setting_boot/controller/StatisticApiController.java)
-```
+```java
 @ExceptionHandler
 	 public ErrorMessage illegalExHandle(DateFormatException e) {
         return new ErrorMessage("400", e.getMessage());
