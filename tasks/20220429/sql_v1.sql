@@ -18,9 +18,9 @@ WHERE info.requestCode = 'L' AND user.HR_ORGAN = #{dept} AND left(info.createDat
 
 
 -- 4. 평균 하루 로그인수
-SELECT round(sum(sub.logCnt)/(datediff(DATE_FORMAT(#{endDate},'%Y-%m-%d'), DATE_FORMAT(#{startDate},'%Y-%m-%d'))+1),3) AS logAvg
+SELECT ifnull(round(sum(sub.logCnt)/(datediff(DATE_FORMAT(#{endDate},'%Y-%m-%d'), DATE_FORMAT(#{startDate},'%Y-%m-%d'))+1),3),0) AS logAvg
 FROM(
-		SELECT left(info.createDate,6) AS logDate, count(*) AS logCnt
+	SELECT left(info.createDate,6) AS logDate, count(*) AS logCnt
         FROM statistic.requestinfo info
         WHERE info.requestCode = 'L' AND left(info.createDate,6) BETWEEN #{startDate} AND #{endDate}
         group by left(info.createDate,6)
