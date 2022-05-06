@@ -3,6 +3,7 @@
 > * [1차 과제(2022.04.14)](#1차-과제)
 > * [2차 과제(2022.04.22)](#2차-과제)
 > * [3차 과제(2022.04.29)](#3차-과제)
+> * [4차 과제(2022.05.06)](#4차-과제)
 
  
 
@@ -14,7 +15,7 @@
  
 **2. 중간 Quiz**
 - MovieVO.java 파일 작성하기 (완료)
-- Github 코드: https://github.com/Lee-Hyun-Ji/spring-web-setting/blob/main/settingweb/src/main/java/com/devfun/vo/MovieVO.java
+- Github 코드 확인하기 [(링크)](https://github.com/Lee-Hyun-Ji/spring-web-setting/blob/main/settingweb/src/main/java/com/devfun/vo/MovieVO.java)
 
 
 <img width="451" alt="과제 완료" src="https://user-images.githubusercontent.com/84483522/163295394-48b89f9b-5fd6-4922-b6bb-468432290a15.PNG">
@@ -24,12 +25,15 @@
 
 **1. REST API 관련 학습**
 - HTTP 통신, 브라우저 동작 과정, REST에 대한 학습 및 정리(완료)
-- URL: https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220422/RESTstudy.md
+- 정리 내용 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220422/RESTstudy.md)
 
 **2. 인터페이스 가이드 문서 작성**
 - 공공 데이터 API 문서를 조사하며 백엔드 직무의 협업 방식에 대한 이해(완료)
 - SW 활용률 관련 API 구상 및 API 가이드 문서 초안 작성(완료)
-- URL: https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220422/SW%20%ED%99%9C%EC%9A%A9%20%ED%98%84%ED%99%A9%20%ED%86%B5%EA%B3%84%20API%20%EA%B0%80%EC%9D%B4%EB%93%9C%20%EB%AC%B8%EC%84%9C.pdf
+- 가이드 문서(초안)확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220422/SW%20%ED%99%9C%EC%9A%A9%20%ED%98%84%ED%99%A9%20%ED%86%B5%EA%B3%84%20API%20%EA%B0%80%EC%9D%B4%EB%93%9C%20%EB%AC%B8%EC%84%9C.pdf)
+
+
+ 
 
 
   
@@ -38,7 +42,7 @@
 
 **1. Spring과 Springboot 비교하기**
 - Spring, Springboot 환경 설정 비교하기(완료)
-- URL: https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220429/Spring_vs_SpringBoot.pdf
+- 정리 내용 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220429/Spring_vs_SpringBoot.pdf)
 
 **2. Springboot 환경 세팅**
 - JDK1.8, Maven, Springboot 2.2.2.RELEASE 세팅(완료)
@@ -46,4 +50,21 @@
 
 **3. SQL 작성**
 - 통계 API 구축을 위한 SQL 작성(완료)
-- URL: https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220429/sql_v1.sql
+- SQL 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220429/sql_v1.sql)
+
+  
+ 
+
+
+
+## 4차 과제
+
+**1. 통계 API 개발**
+- RestController를 활용한 Rest API 구축(완료)
+- RequestParameter 날짜 형식 유효성 검사 구현(완료)
+- 관련 설명 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220506/explain.md)
+
+**2. API 가이드 문서 보완 및 완성**
+- 통계 API 가이드 문서(v1.2) 완성(완료)
+- 가이드 문서(최종본) 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220506/SW%20%ED%99%9C%EC%9A%A9%20%ED%98%84%ED%99%A9%20%ED%86%B5%EA%B3%84%20API_v1.2.pdf)
+
