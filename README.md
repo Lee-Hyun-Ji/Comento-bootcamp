@@ -52,6 +52,7 @@
 - 통계 API 구축을 위한 SQL 작성(완료)
 - SQL 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220429/sql_v1.sql)
 
+
   
  
 
@@ -68,3 +69,42 @@
 - 통계 API 가이드 문서(v1.2) 완성(완료)
 - 가이드 문서(최종본) 확인하기[(링크)](https://github.com/Lee-Hyun-Ji/Comento-bootcamp/blob/main/tasks/20220506/SW%20%ED%99%9C%EC%9A%A9%20%ED%98%84%ED%99%A9%20%ED%86%B5%EA%B3%84%20API_v1.2.pdf)
 
+
+  
+ 
+
+
+
+## (최종)통계 API 호출 결과
+**1. 월별 전체 전속자수**
+
+
+<img width="480" alt="api1" src="https://user-images.githubusercontent.com/84483522/167248362-310c7125-07de-422b-bb6b-ca9138562fd2.PNG">
+
+
+
+**2. 일별 전체 접속자수**
+
+
+<img width="471" alt="api2" src="https://user-images.githubusercontent.com/84483522/167248377-43546f9c-c560-4eaa-8a31-6f362374b2ee.PNG">
+
+
+
+**3. 부서별 월별 로그인수**
+
+
+<img width="559" alt="api3" src="https://user-images.githubusercontent.com/84483522/167248388-bf60eb17-002a-4b86-9135-ec42e5f5f8c7.PNG">
+
+
+
+**4. 평균 하루 로그인수**
+
+
+<img width="609" alt="api4" src="https://user-images.githubusercontent.com/84483522/167248399-a71c66c9-4639-4bc0-897d-4fc6f38dd016.PNG">
+
+
+
+**5. 휴일을 제외한 로그인수**
+
+
+<img width="582" alt="api5" src="https://user-images.githubusercontent.com/84483522/167248411-545c3e4c-b2e4-4c8c-99e8-9f0f5bff6554.PNG">
